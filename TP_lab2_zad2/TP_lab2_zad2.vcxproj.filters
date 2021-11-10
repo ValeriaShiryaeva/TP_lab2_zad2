@@ -31,5 +31,8 @@
     <None Include="Text.doc">
       <Filter>Файлы ресурсов</Filter>
     </None>
+    <None Include="Text.dat">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
   </ItemGroup>
 </Project>
