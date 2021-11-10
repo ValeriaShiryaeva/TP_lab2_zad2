@@ -140,14 +140,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Text.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="NewText.txt" />
     <Text Include="Task.txt" />
     <Text Include="Text.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Text.dat" />
     <None Include="Text.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Text.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

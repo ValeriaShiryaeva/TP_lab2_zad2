@@ -1,23 +1,23 @@
 #include <iostream>
 #include <string>
 #include<fstream>
-#include <vector>
+#include "Text.h"
 using namespace std;
 
-bool checkingFileName(string name_file);
-void reading_words_starting_with_vowels(ifstream&);
-void changing_text(string);
-void print_menu_changing_text();
-int input_number();
 void menu();
 void print_menu();
 void input_from_file();
+void reading_words_starting_with_vowels(ifstream&);
 void output_to_file();
+void changing_text(string);
+void print_menu_changing_text();
+int input_number();
+bool checkingFileName(string name_file);
 
 string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-'";
 string vowels = "AEIOUYaeiouy";
 
-vector <string> text;
+Text text;
 
 int main()
 {
@@ -158,7 +158,7 @@ void output_to_file() {
         else
         {
             int size_str = 0;
-            for (int i = 0; i < text.size(); i++)
+            for (int i = 0; i < text.getSize(); i++)
             {
                 if (size_str + text[i].size() > 95 || text[i] == "\n")
                 {
@@ -175,21 +175,6 @@ void output_to_file() {
     }
     else
         cout << "Не верное имя файла или расширение." << endl;
-}
-
-bool checkingFileName(string name_file) {
-    if (name_file.size() < 4) {
-        cout << "Имя файла короткое." << endl;
-        return false;
-    }
-    name_file = name_file.substr(name_file.find_last_of(".") + 1);
-    if (name_file == "txt" || name_file == "doc" || name_file == "dat")
-        return true;
-    else
-    {
-        cout << "Файл должен иметь формат .txt или .doc" << endl;;
-        return false;
-    }
 }
 
 void changing_text(string s1) {
@@ -221,6 +206,21 @@ void print_menu_changing_text() {
     cout << "Хотите изменить не верно записанное слово" << endl;
     cout << "1. Изменить" << endl;
     cout << "2. Оставить текущее" << endl;
+}
+
+bool checkingFileName(string name_file) {
+    if (name_file.size() < 4) {
+        cout << "Имя файла короткое." << endl;
+        return false;
+    }
+    name_file = name_file.substr(name_file.find_last_of(".") + 1);
+    if (name_file == "txt" || name_file == "doc" || name_file == "dat")
+        return true;
+    else
+    {
+        cout << "Файл должен иметь формат .txt или .doc" << endl;;
+        return false;
+    }
 }
 
 int input_number() {

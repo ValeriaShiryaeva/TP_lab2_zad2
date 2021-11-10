@@ -18,12 +18,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Task.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
     <Text Include="Text.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="NewText.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>
@@ -34,5 +40,10 @@
     <None Include="Text.dat">
       <Filter>Файлы ресурсов</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Text.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
